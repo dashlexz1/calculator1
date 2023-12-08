@@ -14,7 +14,7 @@ public class Calculator {
         if (actionIndex == -1) {
             throw new ActionException("Недопустимый знак для выражения");
         }
-        String[] expression1 = input.split(regexActions[actionIndex]);
+        String[] expression1 = input.replaceAll(" ", "").split(regexActions[actionIndex]);
         if(expression1.length != 2){
             throw new realException("Должно быть 2 числа");
         }
